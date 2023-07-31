@@ -9,7 +9,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 public class Member {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_id",nullable = false)
@@ -20,4 +19,12 @@ public class Member {
 
     @Column(nullable = false)
     private String password;
+
+    public void updateEmail(String email) {
+        this.email = email;
+    }
+
+    public void updatePassword(String password) {
+        this.password = password;
+    }
 }
