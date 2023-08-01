@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -19,6 +21,18 @@ public class Member {
 
     @Column(nullable = false)
     private String password;
+
+    @ElementCollection(fetch = FetchType.EAGER)
+    private List<String> roles = new ArrayList<>();
+
+    public void updateMemberInfo(Long id,List<String> roles) {
+        this.id = id;
+        this.roles = roles;
+    }
+
+    public void updateRoles(List<String> roles) {
+        this.roles = roles;
+    }
 
     public void updateEmail(String email) {
         this.email = email;
