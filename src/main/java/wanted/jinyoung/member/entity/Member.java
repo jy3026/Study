@@ -2,6 +2,7 @@ package wanted.jinyoung.member.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import wanted.jinyoung.board.entity.Board;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -24,6 +25,9 @@ public class Member {
 
     @ElementCollection(fetch = FetchType.EAGER)
     private List<String> roles = new ArrayList<>();
+
+    @OneToMany(mappedBy = "member",cascade = CascadeType.ALL)
+    private List<Board> boards = new ArrayList<>();
 
     public void updateMemberInfo(Long id,List<String> roles) {
         this.id = id;
