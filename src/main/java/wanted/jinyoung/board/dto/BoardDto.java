@@ -16,6 +16,16 @@ public class BoardDto {
 
     @Getter
     @Setter
+    public static class Patch{
+        private Long id;
+        @NotBlank(message = "제목을 입력 해주세요.")
+        private String title;
+        @NotBlank(message = "내용을 입력 해주세요.")
+        private String contents;
+    }
+
+    @Getter
+    @Setter
     public static class Response{
         private String id;
         private String title;
