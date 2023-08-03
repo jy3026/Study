@@ -7,7 +7,9 @@ public enum ExceptionCode {
     MEMBER_NOT_FOUND(404, "Member not found"),
     NOT_VALID_EMAIL_FORMAT(401,"유효 하지 않은 이메일 형식 입니다"),
     ENTER_AT_LEAST_EIGHT(401,"비밀번호를 8자리 이상 입력하세요"),
-    BOARD_NOT_FOUND(404,"Board not found");
+    BOARD_NOT_FOUND(404,"Board not found"),
+    CHECK_LOGIN(401,"로그인 하세요."),
+    ONLY_AUTHOR(401,"게시글 작성자가 아닙니다.");
 
     @Getter
     private int status;
