@@ -39,6 +39,7 @@ DELETE /board/{board-id}
 ```
 
 ## 구현한 API 동작을 촬영한 데모 영상 링크
+https://youtu.be/OLYUNGholVs
 
 ## 구현 방법 및 이유에 대한 간략한 설명
 Spring Security를 통해 사용자 인증 로직을 구현했습니다. 
