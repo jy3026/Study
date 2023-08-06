@@ -30,5 +30,6 @@ public class BoardDto {
         private String id;
         private String title;
         private String contents;
+        private String email;
     }
 }
