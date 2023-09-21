@@ -1,6 +1,3 @@
-<h1>wanted-pre-onboarding-backend</h1>
-</br>
-
 ## 지원자의 성명
 최진영
 
